@@ -1,0 +1,25 @@
+This simple program fixes ID3 tags and album art of MP3s (now specifically for copyrighted stuffs). 
+
+Steps:
+-Install BeautifulSoup: a library designed for screen-scraping HTML and XML(python). For more: http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html
+	When in the folder "beautifulsoup4-4.1.0" 
+	$ python setup.py install (requires root access - $sudo su)
+-Install Mutagen: a Python module to handle audio metadata. For more: http://code.google.com/p/mutagen/
+	When in the folder "mutagen-1.20"
+	$ python setup.py install 
+-Run 
+$ python update_art.py '/path/to/music/folder'
+
+And the magic awaits you! (In case of error, run the script again. Should skip that wrongly formatted Mp3 and move to another)
+
+Limitaions:
+-For now it only supports .mp3 files (Slim or no chance that I'll extend to other formats).
+-Only Bollywood music
+-Depends on correctly filled ID3 tag (especially 'album name')
+
+Why the trouble??
+Most of bollywood songs are downloaded from www.songspk.pk (Shame! I know :-/) and these folks have messed up many of the ID3 tags with their copyright(blah blah), which kinda looks messy to me. Hence, have removed their mention from the tags and now it all looks in place(ofcourse neat! :D). Also, their album art has their watermark which in itself is really irritating. So fixed the cover too (hence the name and the primary goal of creation). Now the MP3 doesn't have a mention of their copyright. So #ftw. 
+
+Maturity: Low.
+
+
